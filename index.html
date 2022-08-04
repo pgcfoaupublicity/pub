@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pgcf oau publicity</title>
+<meta name="keywords" content="fashion blog, free web template, blog theme, blog template, CSS, HTML" />
+<meta name="description" content="Fashion Blog is a free web template provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+  var currentPosition = 0;
+  var slideWidth = 750;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
+
+  // Remove scrollbar in JS
+  $('#slidesContainer').css('overflow', 'hidden');
+
+  // Wrap all .slides with #slideInner div
+  slides
+    .wrapAll('<div id="slideInner"></div>')
+    // Float left to display horizontally, readjust .slides width
+	.css({
+      'float' : 'left',
+      'width' : slideWidth
+    });
+
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+  // Insert controls in the DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+    .append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+  // Hide left arrow control on first load
+  manageControls(currentPosition);
+
+  // Create event listeners for .controls clicks
+  $('.control')
+    .bind('click', function(){
+    // Determine new position
+	currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+    
+	// Hide / show controls
+    manageControls(currentPosition);
+    // Move slideInner using margin-left
+    $('#slideInner').animate({
+      'marginLeft' : slideWidth*(-currentPosition)
+    });
+  });
+
+  // manageControls: Hides and Shows controls depending on currentPosition
+  function manageControls(position){
+    // Hide left arrow if position is first slide
+	if(position==0){ $('#leftControl').hide() } else{ $('#leftControl').show() }
+	// Hide right arrow if position is last slide
+    if(position==numberOfSlides-1){ $('#rightControl').hide() } else{ $('#rightControl').show() }
+  }	
+});
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+<style>
+  #more {display: none;}
+  </style>
+</head>
+<body>
+
+<div id="templatemo_site_title_bar_wrapper_outter">
+	
+    <div id="templatemo_site_title_bar_wrapper_inner">
+    
+    	<div id="templatemo_site_title_bar">
+        
+        	<div id="templatemo_site_title_bar_top">
+                <div id="site_title">
+                    <h1><a href="#" target="_blank">
+                        <!--   Fashion Blog <span>free website templates</span>    -->
+                       PGCF OAU PUBLICITY UNIT    
+                    </a></h1>
+                </div>
+                
+                <div id="search_box">
+                    <form action="#" method="get">
+                        <input type="text" value="Enter keyword here..." name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                        <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" />
+                    </form>
+                </div>
+			</div> <!-- end of templatemo_site_title_bar_top -->
+                        
+            <div id="templatemo_menu">
+                <ul>
+                    <li><a href="#" class="current">HOME</a></li>
+                    <li><a href="#">ARTICLES</a></li>
+                    <li><a href="#" target="_blank">EDITORIAL DESK</a></li>
+                    <li><a href="#" target="_blank">PHOTO ALBUM</a></li>
+                    <li><a href="#" class="last">CONTACT US</a></li>
+                </ul>    	
+            </div> <!-- end of menu -->
+        
+        </div> <!-- end of templatemo_site_title_bar -->
+    	
+    </div> <!-- end of templatemo_site_title_bar_wrapper_inner -->
+
+</div> <!-- end of templatemo_site_title_bar_wrapper_outter -->
+
+<div id="templatemo_content_wrapper">
+
+	<div id="templatemo_content">
+    	
+        <div id="templatemo_popular_posts">
+        
+        <div id="slideshow">
+          <div id="slidesContainer">
+            <div class="slide"> <a href="#"> <img src="images/templatemo_image_06.jpg" alt="Image Title" width="380" height="190" />
+              <h2>Reach us to pick a book today</h2>
+              <p>..For thy shall meditate on this words day and night..</p>
+            </a> </div>
+            <div class="slide"> <a href="#"> <img src="images/learnStreaming.jpg" alt="Image Title" width="380" height="190" />
+              <h2>Learn Streaming</h2>
+              <p> Join to learn how to stream during our unit meetings</p>
+            </a> </div>
+            <div class="slide"> <a href="#"> <img src="images/learnPhoto.jpg" alt="Image Title" width="380" height="190" />
+              <h2>Learn Cinematography</h2>
+              <p>Do join us to learn together video coverage and photography</p>
+            </a> </div>
+            <div class="slide"> <a href="#"> <img src="images/writeEditorial.png" alt="Image Title" width="380" height="190" />
+              <h2>Editorial</h2>
+              <p>And the vision received should be documented, Join to be part of editorial team </p>
+            </a> </div>
+          </div>
+        </div> <!-- end of slide show -->
+    
+   	  </div> <!-- end of templatemo_popular_posts -->
+    	
+        <div id="templatemo_main_content_outter">
+        
+        	<div id="templatemo_main_content_inner">
+            
+            	<div id="templatemo_main_column">
+                
+					<div class="post_section">
+                        <h2>Time is Limited</h2>
+                       	<div class="post_info">
+							Aug 04th in <a href="http://www.templatemo.com" target="_parent">TIME SERIES</a> by bro James Abah<a href="#" target="_parent">Pub Sec</a>
+                        </div>
+                        
+                        <div class="post_content">
+                            <img src="images/timeLimited.jpg" alt="image" />
+                            <p>
+                              TIME IS LIMITED <br>
+
+                              If time is TRULY limited, then what is Life? <br>
+
+                              Life is a vapor that appear for a little time and then vanishes away? If someone
+                              had told me years ago that life is too short and will vanishes, I wouldn't have 
+                              believed and If I get to tell you now you might not believe either.
+                              <br> <br>
+                              For Billy Graham once said "I cannot tell young people how brief life is
+                               "How quickly it passes" It even seems like yesterday we were given this mantle
+                               of servitude right in All soul's chapel in that very evening, Calculating this time in
+                               The human calendars is certainly 11 months and a month to a year. 
+                               <br> <br>
+                              Breaking this down it means; We have so far spent 11 months= 11 months * 30 
+                              = 330 days. 
+                              How have you spent each of these days?
+            
+                              <span id="dots">...</span><span id="more">
+                              Truly by providence we have been given the same amount of time in a day 
+i.e 1440 minutes in a day, 168 hours in a week, God has given us a limited time
+ even with the advancement in Health, Science and Technology we have
+ not averagely exceed this figure.
+
+Average American male lives 70 years, female lives 73 years and 6 months
+Average Nigerian lives 54.69 years (2019)
+
+More live beyond this figure, and others below the figure above but the
+average age is the mean of overall.
+
+What a reality it becomes when you think and see you have a short life
+to spend before it vanishes!
+
+
+
+I'd write down my priorities in life and I get committed to certain priorities
+in Life, Now is the accepted time, the things we ought to do, the class we
+need to take, the books we need to read *DO IT NOW* The family you
+need to spend more time with, "DO IT NOW" Money you ought to give, do it
+now. Time to invest in study *DO IT NOW* People you need to evangelize to
+*DO IT NOW* EACH TIME THE CLOCK TICKS ITS SAYING *NOW!* *NOW!* 
+
+Today do it now for there may not be tomorrow for you or for me to 
+kick start that Vision committed into our hands to do *NOW* Because there
+is a warning attached to timing "It is running and will not wait for you* Time
+is too short for indecision and procrastination. *"BE DECISIVE"*
+
+TO A FOOL, Time is long but every morning we have 86400 seconds to spend
+and invest wisely in a day, and every second counts. Each day the bank called *TIME* 
+opens its NEW Account for you and me and IT allows no OVERDRAFT NOR BALANCE* 
+86400 IS 86400 deposit in the account for everyy one. If you fail to use today’s DEPOSIT the 
+loss is yours. "USE THE DEPOSIT NOW"
+
+The bible says redeem the time because today is evil, If there is ever time for the
+gospel has to be taught it is NOW. It is the quality of life and not the Length, Our Christ Jesus
+Spent only 33 years and ended on the cross; to the World he was a failure at
+that point but at the end of HIs life, He said I finished the work that
+my Father gavest me. It doesn't mean if you living for let say 2 or 3 or 10 years but
+will your work be finished?
+A call for you and I to use our time judiciously!
+
+INVEST THAT TIME NOW </span> </p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+                        </div>
+    
+                    </div> <!-- end of a post -->
+                    
+                    <div class="post_section">
+                      <h2>Time is Limited</h2>
+                       <div class="post_info">
+            Aug 04th in <a href="http://www.templatemo.com" target="_parent">TIME SERIES</a> by bro James Abah<a href="#" target="_parent">Pub Sec</a>
+                      </div>
+                      
+                      <div class="post_content">
+                          <img src="images/timeLimited.jpg" alt="image" />
+                          <p>
+                            TIME IS LIMITED <br>
+
+                            If time is TRULY limited, then what is Life? <br>
+
+                            Life is a vapor that appear for a little time and then vanishes away? If someone
+                            had told me years ago that life is too short and will vanishes, I wouldn't have 
+                            believed and If I get to tell you now you might not believe either.
+                            <br> <br>
+                            For Billy Graham once said "I cannot tell young people how brief life is
+                             "How quickly it passes" It even seems like yesterday we were given this mantle
+                             of servitude right in All soul's chapel in that very evening, Calculating this time in
+                             The human calendars is certainly 11 months and a month to a year. 
+                             <br> <br>
+                            Breaking this down it means; We have so far spent 11 months= 11 months * 30 
+                            = 330 days. 
+                            How have you spent each of these days?
+          
+                            <span id="dots">...</span><span id="more">
+                            Truly by providence we have been given the same amount of time in a day 
+i.e 1440 minutes in a day, 168 hours in a week, God has given us a limited time
+even with the advancement in Health, Science and Technology we have
+not averagely exceed this figure.
+
+Average American male lives 70 years, female lives 73 years and 6 months
+Average Nigerian lives 54.69 years (2019)
+
+More live beyond this figure, and others below the figure above but the
+average age is the mean of overall.
+
+What a reality it becomes when you think and see you have a short life
+to spend before it vanishes!
+
+
+
+I'd write down my priorities in life and I get committed to certain priorities
+in Life, Now is the accepted time, the things we ought to do, the class we
+need to take, the books we need to read *DO IT NOW* The family you
+need to spend more time with, "DO IT NOW" Money you ought to give, do it
+now. Time to invest in study *DO IT NOW* People you need to evangelize to
+*DO IT NOW* EACH TIME THE CLOCK TICKS ITS SAYING *NOW!* *NOW!* 
+
+Today do it now for there may not be tomorrow for you or for me to 
+kick start that Vision committed into our hands to do *NOW* Because there
+is a warning attached to timing "It is running and will not wait for you* Time
+is too short for indecision and procrastination. *"BE DECISIVE"*
+
+TO A FOOL, Time is long but every morning we have 86400 seconds to spend
+and invest wisely in a day, and every second counts. Each day the bank called *TIME* 
+opens its NEW Account for you and me and IT allows no OVERDRAFT NOR BALANCE* 
+86400 IS 86400 deposit in the account for everyy one. If you fail to use today’s DEPOSIT the 
+loss is yours. "USE THE DEPOSIT NOW"
+
+The bible says redeem the time because today is evil, If there is ever time for the
+gospel has to be taught it is NOW. It is the quality of life and not the Length, Our Christ Jesus
+Spent only 33 years and ended on the cross; to the World he was a failure at
+that point but at the end of HIs life, He said I finished the work that
+my Father gavest me. It doesn't mean if you living for let say 2 or 3 or 10 years but
+will your work be finished?
+A call for you and I to use our time judiciously!
+
+INVEST THAT TIME NOW </span> </p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+                      </div>
+  
+                  </div> <!-- end of a post -->
+                
+                <div class="cleaner"></div>
+                </div>      
+                
+                <div id="templatemo_side_column_01">
+                
+                	<div class="side_column_01_section">
+                    	
+                        <a href="#"><img src="images/templatemo_200_200_ads.jpg" alt="ads" /></a>
+                        
+                    </div>
+	                
+    	          	<div class="side_column_01_section">
+                        <h3>NEWEST POSTS</h3>
+                        <ul class="side_menu">
+                            <li><a href="#">Newest post 1</a></li>
+                            <li><a href="#">Newest post 2</a></li>
+                            <li><a href="#">Newest post 3</a></li>
+                            <li><a href="#">Newest post 4</a></li>
+                            
+                            <li><a href="#">Newest post 5</a></li>
+                            <li><a href="#">Newest post 6</a></li>
+                            <li><a href="#">Newest post 7</a></li>
+                            <li><a href="#">Newest post 8</a></li>               
+                        </ul>
+                    
+                    </div>
+                    
+                    <div class="side_column_01_section">
+                    
+                        <h3>FEEDBACK POSTS</h3>
+                        <div class="recent_post">
+                          <h4><a href="#">POST 1</a></h4>
+                            Aliquam nec est quis felis venenatis imperdiet. Duis placerat luctus sem.
+                        </div>
+                        
+                        <div class="recent_post">
+                          <h4><a href="#">POST 2</a></h4>
+                            In vitae placerat enim. Aenean elementum lectus eleifend a pellentesque lacus.</div>
+                        
+                        <div class="recent_post">
+                        	<h4><a href="#">POST 3</a></h4>
+                            Nulla gravida, lacus molestie convallis dolor sem suscipit nisl, ut pharetra.</div>
+                    
+                    </div>
+                
+                	<div class="cleaner"></div>
+                </div>      	
+            
+            <div class="cleaner"></div>
+            </div> <!-- end of templatemo_main_content_inner -->
+        
+        	<div class="cleaner"></div>
+        </div> <!-- end of templatemo_main_content_outter -->
+        
+        <div id="templatemo_side_column_02">
+        
+        	<div class="side_column_02_section">
+                                
+                <div class="side_column_02_section_content">
+            		
+                    <div class="section_rss_twitter twitter">
+                    	<a href="#">FOLLOW US <span>on twitter</span></a>
+                    </div>
+                    
+                    <div class="margin_bottom_20"></div>
+                    
+                    <div class="section_rss_twitter rss">
+                    	<a href="#">SUBSCRIBE <span>rss feed</span></a>
+        		    </div>    
+                   
+                </div>
+            
+            </div>
+        	
+            <div class="side_column_02_section">
+            	
+                <h3>Partners</h3>
+                
+                <div class="side_column_02_section_content">
+                	<ul class="side_menu">
+                        <li><a href="#" target="_blank">Testimonies</a></li>
+                        <li><a href="#" target="_parent">Graphics Collections</a></li>
+                        <li><a href="#" target="_blank">PGCF TV</a></li>
+                        <li><a href="#" target="_parent">Spotlight Saturday</a></li>
+                        <li><a href="#" target="_blank">Best Literature Collections</a></li>                  
+                  </ul>
+                </div>
+                
+            </div>
+            
+            <div class="side_column_02_section">
+            
+            	<h3>Community Links</h3>
+                
+                <div class="side_column_02_section_content">
+                    
+                    <div class="recent_post">
+                    <h4><a href="https://cornerstone-coc.com/blog/2021/02/14/five-ways-god-cares-for-you#:~:text=God%20provides%20us%20with%20His,%2C%201%20Peter%205.6%2D7.">God care for us</a></h4>
+                    God provides us with His constant love and care. Humble yourselves, therefore, under the mighty hand of God so that at the proper time he may exalt you, casting all your anxieties on him, because he cares for you, 1 Peter 5.6-7. Never forget that Peter wrote from personal experience. He had personally witnessed the love, care, and compassion of our Savior. Our God truly cares.
+                    Now, how about you? Will you reach out to Him in faithful service?
+                    </div>
+                    
+                    <div class="recent_post">
+                    <h4><a href="https://www.biblestudytools.com/bible-study/topical-studies/ways-god-is-faithful-when-life-doesnt-feel-fair.html">God is faithful</a></h4>
+                    God is faithful, and we are called to walk by faith and not by sight. (2 Cor. 5:7).
+                    Despite the evolving and unstable seasons that life brings 
+                    </div>
+                    
+                    <div class="recent_post">
+                    <h4><a href="#"> The Power to Change</a></h4>
+                    How would your life change if you committed to meeting with God everyday?
+
+                    The writer of Hebrews tells us the Word of God “is living and active and sharper than any two-edged sword, and piercing as far as the division of soul and spirit,
+                     of both joints and marrow, and able to judge the thoughts and intentions of the heart” (Hebrews 4:12).
+                    </div>
+                    
+                    <div class="recent_post">
+                    <h4><a href="https://www.biblestudytools.com/bible-study/tips/quest-for-fire-11639433.html"> Quest for Fire </a></h4>God provides us with His constant love and care. Humble yourselves, therefore, under the mighty hand of God so that at the proper time he may exalt you, casting all your anxieties on him, because he cares for you, 1 Peter 5.6-7. Never forget that Peter wrote from personal experience. He had personally witnessed the love, care, and compassion of our Savior. Our God truly cares.
+                    There is a temptation for older Christians to settle into a routine — into a self-perpetuating "system" of Christianity. We attend church, listen to Christian music, give our offerings, and occasionally attend prayer meetings. It's very easy for the machinery of Christianity 
+                    to act like a boat which will carry those who step aboard with very little effort on their part.
+                    </div>
+                    
+                    <div class="recent_post">
+                    <h4><a href="https://www.biblestudytools.com/bible-study/tips/how-can-i-get-started-studying-the-bible-11633143.html">  How Can I Get Started Studying the Bible?</a></h4>
+                    I'm a new Christian, and I want to learn more from the Bible. I have an old Bible that belonged to my grandmother, and it's difficult to understand. Where do I begin?
+                    </div>
+                    
+                    <div class="cleaner_h10"></div>
+                    
+                    <div class="button_02 fl margin_r_10"><a href="#">Submit</a></div> <div class="button_02 fl"><a href="#">More</a></div>
+                    
+                </div>
+            
+            </div>
+        
+    </div> <!-- end of templatemo_side_column_02 -->
+        
+        
+        <div class="cleaner"></div>
+    </div> <!-- end of templatemo_content -->
+    
+   	<div class="cleaner"></div>    
+</div>
+
+<div id="templatemo_footer_wrapper_outter">
+
+	<div id="templatemo_footer_wrapper_inner">
+    
+    	<div id="templatemo_footer">
+        
+        	
+            <div class="section_w200">
+            
+            	<h4>Copyright Information</h4>
+                
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu orci vel nisi sollicitudin convallis sed in velit. Vivamus gravida sagittis turpis, eget sagittis odio ullamcorper fringilla.</p>
+               <p>Nunc sed diam sed dui iaculis pharetra eu sed elit. Nunc arcu sapien, pellentesque at posuere nec, tincidunt dignissim enim.</p>
+                
+          </div>
+            
+            <div class="section_w200">
+            
+              <h4>Your Feedback</h4>
+                
+              <p>Mauris aliquam ultrices lacus eget rhoncus. Pellentesque gravida porta nulla at mollis. Nam neque tellus, hendrerit et sollicitudin id, pulvinar cursus quam. Suspendisse potenti.</p>
+              <p>Sed imperdiet, odio vel ullamcorper tempor, tortor velit vestibulum risus, a fermentum justo sapien non risus.</p>
+                
+                <div class="button_02"><a href="#">Make a suggestion</a></div>
+                
+            </div>
+            
+            <div class="section_w200">
+            
+            	<h4>Friends</h4>
+                
+                <ul class="footer_list_menu">
+                	<li><a href="#" target="_parent">BRETHREN TESTIMONIES</a></li>
+                    <li><a href="#" target="_parent">QUICK READ</a></li>
+                    <li><a href="#" target="_blank">MESSAGES</a></li>
+                    <li><a href="#" target="_parent">UNIT MEETINGS</a></li>
+                    <li><a href="#" target="_blank">CONTACT US</a></li>
+                </ul>
+                
+            </div>
+            
+            <div class="section_w200">
+            
+            	<h4>The post graduate Christian Fellowship OAU</h4>
+        		<a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:160px;height:94px" src="images/pgcfLogo.png" alt="Valid XHTML 1.0 Transitional" width="100px" height="150px" vspace="8" border="0" /></a>
+    		       </div>
+            
+        	<div class="cleaner_h20" align=center>
+            <br>
+            Copyright © PGCFOAUPUBLICITY 2022 | <a href="#">Light To All</a> | 
+        <a href="#" target="_parent">We love you</a> | <a href="#" target="_parent">We care for you</a>
+      </div>
+            
+        </div> <!-- end of templatemo_footer -->
+    
+    	<div class="cleaner" ></div>
+    </div> <!-- end of templatemo_footer_wrapper_inner -->
+	
+    <div class="cleaner"></div>
+</div> <!-- end of templatemo_footer_wrapper_outter -->
+<div align=center> Christ that started the good work will be able <a href='#'> to complete it</a></div></body>
+</html>
